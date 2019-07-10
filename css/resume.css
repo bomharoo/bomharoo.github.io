@@ -29,11 +29,19 @@ h6 {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 5.5rem;
 }
 
 h2 {
+  font-size: 3.5rem;
+}
+
+h2.portfolio {
+  font-size: 3.5rem;
+}
+
+h5 {
   font-size: 3.5rem;
 }
 
@@ -207,4 +215,48 @@ a {
 
 a:hover, a:focus, a:active {
   color: #824027;
+}
+
+.portfolio-item .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: ##67E2BD;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.portfolio-item .caption .caption-content {
+  color: #fff;
+  margin: auto 2rem 2rem;
+}
+
+.portfolio-item .caption .caption-content h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.portfolio-item .caption .caption-content p {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+  .portfolio-item img {
+    -webkit-transition: -webkit-clip-path 0.15s ease-out;
+    -webkit-clip-path: inset(-1px);
+    clip-path: inset(-1px);
+  }
+  .portfolio-item:hover img {
+    -webkit-clip-path: inset(0rem);
+    clip-path: inset(0rem);
+  }
+  .portfolio-item:hover .caption {
+    background-color: rgba(103, 226, 189, 0.9);
+    -webkit-clip-path: inset(0rem);
+    clip-path: inset(0rem);
+  }
 }
